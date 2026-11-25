@@ -28,7 +28,9 @@ python3 main.py   # writes /output/entry.txt (or $OUTPUT_DIR/entry.txt)
 
 Deterministic: the same joke on every run. The output is 107
 characters of UTF-8 text (107 bytes, plain ASCII), within the gate of
-1–200 characters, a single line, not whitespace-only.
+1–200 characters, a single line, not whitespace-only. `main.py` checks
+that gate itself before writing — an empty, over-long, or multi-line
+joke fails loudly instead of producing a bad entry.
 
 ## License
 
